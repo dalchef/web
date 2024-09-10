@@ -107,24 +107,44 @@
             </div>
         </div>
 
-        <div id="services" class="section bg-gray-100">
-            <div class="container mx-auto px-4 h-full flex items-center">
-                <div class="w-full">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Services</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
-                            
-                            <h3 class="text-2xl font-bold mb-4">Generative MarTech Suite</h3>
-                            <p>We offer optimized strategies using AI/ML-based marketing technology stacks. From over 10,000 marketing tools, we find the perfect combination tailored to your company's needs.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
-                            <h3 class="text-2xl font-bold mb-4">eCommerce Venture Studio</h3>
-                            <p>Comprehensive solution for entering overseas e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
-                        </div>
+       <div id="services" class="section relative overflow-hidden flex items-center justify-center min-h-screen">
+        <div class="absolute inset-0 z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="bg_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white shadow-text" data-aos="fade-up">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-right">
+                    <div class="flex flex-col items-center mb-4">
+                        <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-white shadow-text">Generative MarTech Suite</h3>
                     </div>
+                    <p class="text-gray-100 shadow-text">We offer optimized strategies based on AI/ML-driven marketing technology stack. We find the best combination for your company from over 10,000 marketing tools.</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-left">
+                    <div class="flex flex-col items-center mb-4">
+                        <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-white shadow-text">eCommerce Venture Studio</h3>
+                    </div>
+                    <p class="text-gray-100 shadow-text">A comprehensive solution for entering global e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <style>
+        .shadow-text {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
 
         <div id="about" class="section bg-white">
             <div class="container mx-auto px-4 h-full flex items-center">
