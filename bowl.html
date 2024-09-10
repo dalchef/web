@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOWL International - Partner in Global E-commerce Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .section {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-container video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-width: 640px) {
+            .video-container video {
+                width: auto;
+                height: 100%;
+            }
+        }
+        .footer-hidden {
+            transform: translateY(100%);
+            transition: transform 0.5s ease-out;
+        }
+        .footer-visible {
+            transform: translateY(0);
+            transition: transform 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#hero" class="flex items-center">
+                    <img src="./img/BOWL_Logo_white.png" alt="BOWL International Logo" class="h-10 w-auto">
+                </a>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#services" class="hover:text-blue-200">Service</a></li>
+                    <li><a href="#about" class="hover:text-blue-200">Vision</a></li>
+                    <li><a href="#team" class="hover:text-blue-200">Team</a></li>
+                    <li><a href="#history-1" class="hover:text-blue-200">History</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div id="hero" class="section">
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="bowl.mp4" type="video/mp4">
+                    귀하의 브라우저는 비디오 태그를 지원하지 않습니다.
+                </video>
+                <div class="content-overlay">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white text-shadow" data-aos="fade-up">Partner in Global E-commerce Growth</h2>
+                    <p class="text-xl md:text-2xl mb-8 text-white text-shadow" data-aos="fade-up" data-aos-delay="200">Grow your business with data-driven marketing solutions</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="section bg-gray-100">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Services</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-right">
+                            
+                            <h3 class="text-2xl font-bold mb-4">Generative MarTech Suite</h3>
+                            <p>We offer optimized strategies using AI/ML-based marketing technology stacks. From over 10,000 marketing tools, we find the perfect combination tailored to your company's needs.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-left">
+                            <h3 class="text-2xl font-bold mb-4">eCommerce Venture Studio</h3>
+                            <p>Comprehensive solution for entering overseas e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="section bg-white">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Vision</h2>
+                    <p class="text-center max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                        BOWL International helps achieve success in the global e-commerce market through data-driven decision-making and sustainable growth strategies. Our team of experts and innovative technology enhance your brand value and increase your revenue.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="team" class="section bg-gray-100">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Team</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center" data-aos="fade-up">
+                            <img src="./img/kh.jpg" alt="KH Kim" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">KH Kim</h3>
+                            <p>Founding Partner</p>
+                            <p>Program Partner at Techstars</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="./img/suk.jpg" alt="Euisuk Rho" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">Euisuk Rho</h3>
+                            <p>Founding Partner</p>
+                            <p>CEO at Food and The City</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="./img/ho.jpg" alt="Jinho Bae" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">Jinho Bae</h3>
+                            <p>Founding Partner</p>
+                            <p>CEO at Nextstage</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./img/jh.jpg" alt="Jihoon Song" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">Jihoon Song</h3>
+                            <p>Founding Partner</p>
+                            <p>CEO at NOMADEA</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="./img/sg.jpg" alt="Segyo Oh" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">Segyo Oh</h3>
+                            <p>Program Manager</p>
+                            <p>Prev. Techstars</p>
+                        </div>
+                        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./img/yh.jpg" alt="Yoonhee Bae" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <h3 class="text-xl font-bold">Yoonhee Bae</h3>
+                            <p>Program Manager</p>
+                            <p>Prev. K-Brain Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-1" class="section bg-white">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our History (2023)</h2>
+                    <div class="space-y-12">
+                        <div class="flex items-center" data-aos="fade-right">
+                            <div class="w-32 font-bold text-right pr-8">2023.02</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">IGNITABULL</h3>
+                                <p>MOU on cooperation in BOWL PoC Program & Flywheel Partnership Program with IGNITABULL.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-right">
+                            <div class="w-32 font-bold text-right pr-8">2023.05</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/KU_logo.png" alt="Korea University Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Korea University</h3>
+                                <p>Nominated for the SMEs and Startups Ministry 2023 Korea University pre-startup support program.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-right" data-aos-delay="200">
+                            <div class="w-32 font-bold text-right pr-8">2023.06</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Seoul Startup Hub</h3>
+                                <p>Nominated for the Seoul Startup Hub Gongdeok 2023 Hub batch program for global startups.</p>
+                            </div>
+                        </div>
+                         
+                  
+                        <div class="flex items-center" data-aos="fade-right">
+                            <div class="w-32 font-bold text-right pr-8">2023.11</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">KOTRA</h3>
+                                <p>Won the 1st-place with eCommerce PoC Program at KOTRA 2023 Export voucher competition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-2" class="section bg-gray-100">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our History (2024)</h2>
+                    <div class="space-y-12">
+                        
+                        <div class="flex items-center" data-aos="fade-right" data-aos-delay="200">
+                            <div class="w-32 font-bold text-right pr-8">2024.03</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Sungkyunkwan University</h3>
+                                <p>Nominated for the SMEs and Startups Ministry 2024 Sungkyunkwan University startup support program.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-right" data-aos-delay="400">
+                            <div class="w-32 font-bold text-right pr-8">2024.05</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/fosterBridge.png" alt="Premier-Plan Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Foster Bridge</h3>
+                                <p>MOU on cooperation in "FOSTER BRIDGE in Asia" Startup global networking program with Premier-Plan.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-right">
+                            <div class="w-32 font-bold text-right pr-8">2024.08</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/kibo_logo.png" alt="KIBO Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">KIBO</h3>
+                                <p>Obtained "Venture Business" certification from Korea Technology Finance Corporation.</p>
+                            </div>
+                        </div>
+                
+                        <div class="flex items-center" data-aos="fade-right" data-aos-delay="200">
+                            <div class="w-32 font-bold text-right pr-8">2024.09</div>
+                            <div class="w-24 h-24 flex-shrink-0 mr-8">
+                                <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="w-full h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">Innovation Business Association</h3>
+                                <p>Operation 2024 Value Chain Convergence Support Program hosted by Innovation Business Association.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="stats" class="section bg-gray-100">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our performance</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <p class="text-4xl font-bold text-blue-600">100%</p>
+                            <p>Driving Client Success</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <p class="text-4xl font-bold text-blue-600">500%</p>
+                            <p>Maximum Annual Growth Rate</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <p class="text-4xl font-bold text-blue-600">$1M+</p>
+                            <p>Client Revenue Achievement in 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="contact" class="section bg-blue-600">
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="w-full text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Start Now</h2>
+                    <p class="text-center mb-8" data-aos="fade-up" data-aos-delay="200">Together, we'll create success in the global e-commerce market.</p>
+                    <div class="text-center">
+                        <a href="mailto:kkh908@naver.com" class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-100 inline-block" data-aos="fade-up" data-aos-delay="400">contact</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function() {
+            var $window = $(window);
+            var $document = $(document);
+            var $sections = $('.section');
+            var currentSection = 0;
+            var isAnimating = false;
+
+            function goToSection(index) {
+                if (isAnimating) return;
+                isAnimating = true;
+                currentSection = index;
+                var scrollTo = $sections.eq(index).offset().top;
+                $('html, body').animate({
+                    scrollTop: scrollTo
+                }, 1000, function() {
+                    isAnimating = false;
+                });
+            }
+
+            $window.on('wheel', function(e) {
+                e.preventDefault();
+                if (isAnimating) return;
+                if (e.originalEvent.deltaY > 0) {
+                    if (currentSection < $sections.length - 1) {
+                        goToSection(currentSection + 1);
+                    }
+                } else {
+                    if (currentSection > 0) {
+                        goToSection(currentSection - 1);
+                    }
+                }
+            });
+
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                var $target = $(target);
+                if ($target.length) {
+                    var index = $sections.index($target);
+                    goToSection(index);
+                }
+            });
+
+            AOS.init({
+                duration: 1000,
+                once: true,
+                disable: 'mobile'
+            });
+
+            $window.on('resize', AOS.refresh);
+
+            // 모바일 환경에서 터치 스와이프 지원
+            var touchStartY = 0;
+            var touchEndY = 0;
+
+            document.addEventListener('touchstart', function(e) {
+                touchStartY = e.touches[0].clientY;
+            }, false);
+
+            document.addEventListener('touchend', function(e) {
+                touchEndY = e.changedTouches[0].clientY;
+                handleSwipe();
+            }, false);
+
+            function handleSwipe() {
+                if (touchStartY > touchEndY + 50) {
+                    if (currentSection < $sections.length - 1) {
+                        goToSection(currentSection + 1);
+                    }
+                } else if (touchStartY < touchEndY - 50) {
+                    if (currentSection > 0) {
+                        goToSection(currentSection - 1);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
