@@ -81,25 +81,57 @@
     </style>
 </head>
 <body class="font-sans">
-    <header class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="#hero" class="flex items-center">
-                    <img src="./img/BOWL_Logo_white.png" alt="BOWL International Logo" class="h-10 w-auto">
-                </a>
-            </div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#services" class="hover:text-blue-200">Service</a></li>
-                    <li><a href="#about" class="hover:text-blue-200">Vision</a></li>
-                    <li><a href="#team" class="hover:text-blue-200">Team</a></li>
-                    <li><a href="#history-1" class="hover:text-blue-200">History</a></li>
-                    <li><a href="#contact" class="hover:text-blue-200">Contact</a></li>
-                </ul>
-            </nav>
+   <header class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white p-2 sm:p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#hero" class="flex items-center">
+                <img src="./img/BOWL_Logo_white.png" alt="BOWL International Logo" class="h-6 sm:h-8 md:h-10 w-auto">
+            </a>
         </div>
-    </header>
+        <nav class="hidden md:block">
+            <ul class="flex space-x-2 sm:space-x-4">
+                <li><a href="#services" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Service</a></li>
+                <li><a href="#about" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Vision</a></li>
+                <li><a href="#team" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Team</a></li>
+                <li><a href="#history-1" class="text-xs sm:text-sm md:text-base hover:text-blue-200">History</a></li>
+                <li><a href="#contact" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="md:hidden hidden" id="mobile-menu">
+        <ul class="pt-2 pb-4">
+            <li><a href="#services" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Service</a></li>
+            <li><a href="#about" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Vision</a></li>
+            <li><a href="#team" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Team</a></li>
+            <li><a href="#history-1" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">History</a></li>
+            <li><a href="#contact" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Contact</a></li>
+        </ul>
+    </div>
+</header>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+    for (let link of mobileMenuLinks) {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+    }
+});
+</script>
     <div id="fullpage">
         <div id="hero" class="section">
             <div class="video-container">
