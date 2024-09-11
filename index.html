@@ -94,6 +94,7 @@
                 <li><a href="#about" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Vision</a></li>
                 <li><a href="#team" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Team</a></li>
                 <li><a href="#history-1" class="text-xs sm:text-sm md:text-base hover:text-blue-200">History</a></li>
+                <li><a href="#partners" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Partners</a></li>
                 <li><a href="#contact" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Contact</a></li>
             </ul>
         </nav>
@@ -108,7 +109,8 @@
             <li><a href="#services" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Service</a></li>
             <li><a href="#about" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Vision</a></li>
             <li><a href="#team" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Team</a></li>
-            <li><a href="#history-1" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">History</a></li>
+            <li><a href="#history-1" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">History</a></li> 
+            <li><a href="#partners" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Partners</a></li>
             <li><a href="#contact" class="block text-xs sm:text-sm py-2 px-4 hover:bg-blue-700">Contact</a></li>
         </ul>
     </div>
@@ -218,140 +220,157 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     </style>
 
-       <div id="team" class="section bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" data-aos="fade-up">Team</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+<div id="fosterbridge" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16">
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">FosterBridge</h2>
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="./img/fosterbridge-logo.png" alt="FosterBridge Logo" class="mx-auto mb-6 w-48">
+            <p class="mb-6 text-lg">FosterBridge is a global startup networking program organized by BOWL International. It connects and supports innovative startups across Asia, fostering growth and collaboration.</p>
+            <button id="openFosterBridgeModal" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">Learn more </button>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="team" class="section bg-gray-100 min-h-screen flex items-center">
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16" data-aos="fade-up">Team</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12 max-w-4xl mx-auto">
             <div class="text-center" data-aos="fade-up">
-                <img src="./img/kh.jpg" alt="KH Kim" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">KH Kim</h3>
-                <p class="text-sm sm:text-base">Founding Partner</p>
-                <p class="text-xs sm:text-sm text-gray-600">Program Partner at Techstars</p>
+                <img src="./img/kh.jpg" alt="KH Kim" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">KH Kim</h3>
+                <p class="text-sm">Founding Partner</p>
+                <p class="text-xs text-gray-600">Program Partner at Techstars</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                <img src="./img/suk.jpg" alt="Euisuk Rho" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">Euisuk Rho</h3>
-                <p class="text-sm sm:text-base">Founding Partner</p>
-                <p class="text-xs sm:text-sm text-gray-600">CEO at Food and The City</p>
+                <img src="./img/suk.jpg" alt="Euisuk Rho" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">Euisuk Rho</h3>
+                <p class="text-sm">Founding Partner</p>
+                <p class="text-xs text-gray-600">CEO at Food and The City</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="./img/ho.jpg" alt="Jinho Bae" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">Jinho Bae</h3>
-                <p class="text-sm sm:text-base">Founding Partner</p>
-                <p class="text-xs sm:text-sm text-gray-600">CEO at Nextstage</p>
+                <img src="./img/ho.jpg" alt="Jinho Bae" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">Jinho Bae</h3>
+                <p class="text-sm">Founding Partner</p>
+                <p class="text-xs text-gray-600">CEO at Nextstage</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <img src="./img/jh.jpg" alt="Jihoon Song" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">Jihoon Song</h3>
-                <p class="text-sm sm:text-base">Founding Partner</p>
-                <p class="text-xs sm:text-sm text-gray-600">CEO at NOMADEA</p>
+                <img src="./img/jh.jpg" alt="Jihoon Song" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">Jihoon Song</h3>
+                <p class="text-sm">Founding Partner</p>
+                <p class="text-xs text-gray-600">CEO at NOMADEA</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <img src="./img/sg.jpg" alt="Segyo Oh" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">Segyo Oh</h3>
-                <p class="text-sm sm:text-base">Program Manager</p>
-                <p class="text-xs sm:text-sm text-gray-600">Prev. Techstars</p>
+                <img src="./img/sg.jpg" alt="Segyo Oh" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">Segyo Oh</h3>
+                <p class="text-sm">Program Manager</p>
+                <p class="text-xs text-gray-600">Prev. Techstars</p>
             </div>
             <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-                <img src="./img/yh.jpg" alt="Yoonhee Bae" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-2 sm:mb-4">
-                <h3 class="text-lg sm:text-xl font-bold">Yoonhee Bae</h3>
-                <p class="text-sm sm:text-base">Program Manager</p>
-                <p class="text-xs sm:text-sm text-gray-600">Prev. K-Brain Co.</p>
+                <img src="./img/yh.jpg" alt="Yoonhee Bae" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
+                <h3 class="text-base sm:text-lg font-bold">Yoonhee Bae</h3>
+                <p class="text-sm">Program Manager</p>
+                <p class="text-xs text-gray-600">Prev. K-Brain Co.</p>
             </div>
         </div>
     </div>
 </div>
 
-      <div id="history-1" class="section bg-white min-h-screen flex items-center pt-16 pb-8">
+<div id="history" class="section bg-white min-h-screen flex items-center justify-center pt-16 pb-8">
     <div class="container mx-auto px-2 sm:px-4">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-8" data-aos="fade-up">Our History (2023)</h2>
-        <div class="space-y-4 sm:space-y-8">
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2023.02</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">IGNITABULL</h3>
-                    <p class="text-xs sm:text-sm">MOU on cooperation in BOWL PoC Program & Flywheel Partnership Program with IGNITABULL.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2023.05</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/KU_logo.png" alt="Korea University Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">Korea University</h3>
-                    <p class="text-xs sm:text-sm">Nominated for the SMEs and Startups Ministry 2023 Korea University pre-startup support program.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2023.06</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">Seoul Startup Hub</h3>
-                    <p class="text-xs sm:text-sm">Nominated for the Seoul Startup Hub Gongdeok 2023 Hub batch program for global startups.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2023.11</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">KOTRA</h3>
-                    <p class="text-xs sm:text-sm">Won the 1st-place with eCommerce PoC Program at KOTRA 2023 Export voucher competition.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="history-2" class="section bg-gray-100 min-h-screen flex items-center pt-16 pb-8">
-    <div class="container mx-auto px-2 sm:px-4">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-8" data-aos="fade-up">Our History (2024)</h2>
-        <div class="space-y-4 sm:space-y-8">
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2024.03</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">Sungkyunkwan University</h3>
-                    <p class="text-xs sm:text-sm">Nominated for the SMEs and Startups Ministry 2024 Sungkyunkwan University startup support program.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2024.05</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/fosterBridge.png" alt="Premier-Plan Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">Foster Bridge</h3>
-                    <p class="text-xs sm:text-sm">MOU on cooperation in "FOSTER BRIDGE in Asia" Startup global networking program with Premier-Plan.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2024.08</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/kibo_logo.png" alt="KIBO Logo" class="w-full h-full object-contain">
-                </div>
-                <div>
-                    <h3 class="text-sm sm:text-base font-semibold">KIBO</h3>
-                    <p class="text-xs sm:text-sm">Obtained "Venture Business" certification from Korea Technology Finance Corporation.</p>
-                </div>
-            </div>
-            <div class="flex flex-row items-start" data-aos="fade-right">
-                <div class="w-16 sm:w-24 font-bold text-right pr-2 sm:pr-4 text-xs sm:text-sm">2024.09</div>
-                <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 mx-2 sm:mx-4">
-                    <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="w-full h-full object-contain">
-                </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" data-aos="fade-up">Our History</h2>
+        <div class="space-y-4 sm:space-y-6 max-w-3xl mx-auto">
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2024.09</div>
                 <div>
                     <h3 class="text-sm sm:text-base font-semibold">Innovation Business Association</h3>
-                    <p class="text-xs sm:text-sm">Operation 2024 Value Chain Convergence Support Program hosted by Innovation Business Association.</p>
+                    <p class="text-xs sm:text-sm">Operation 2024 Value Chain Convergence Support Program</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2024.08</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">KIBO</h3>
+                    <p class="text-xs sm:text-sm">Obtained "Venture Business" certification from Korea Technology Finance Corporation</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2024.05</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">Foster Bridge</h3>
+                    <p class="text-xs sm:text-sm">MOU on cooperation in "FOSTER BRIDGE in Asia" Startup global networking program</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2024.03</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">Sungkyunkwan University</h3>
+                    <p class="text-xs sm:text-sm">Nominated for the SMEs and Startups Ministry startup support program</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2023.11</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">KOTRA</h3>
+                    <p class="text-xs sm:text-sm">Won the 1st-place with eCommerce PoC Program at Export voucher competition</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2023.06</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">Seoul Startup Hub</h3>
+                    <p class="text-xs sm:text-sm">Nominated for the Gongdeok Hub batch program for global startups</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2023.05</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">Korea University</h3>
+                    <p class="text-xs sm:text-sm">Nominated for the SMEs and Startups Ministry pre-startup support program</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center" data-aos="fade-right">
+                <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2023.02</div>
+                <div>
+                    <h3 class="text-sm sm:text-base font-semibold">IGNITABULL</h3>
+                    <p class="text-xs sm:text-sm">MOU on cooperation in BOWL PoC Program & Flywheel Partnership Program</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="partners" class="section bg-gray-100">
+    <div class="container mx-auto px-4 h-full flex items-center">
+        <div class="w-full">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our partners & Client</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up">
+                    <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./img/KU_logo.png" alt="Korea University Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="500">
+                    <img src="./img/fosterBridge.png" alt="Foster Bridge Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
+                    <img src="./img/kibo_logo.png" alt="KIBO Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="700">
+                    <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="w-32 h-32 flex items-center justify-center" data-aos="fade-up" data-aos-delay="700">
+                    <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="max-w-full max-h-full object-contain">
                 </div>
             </div>
         </div>
@@ -395,6 +414,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
         
+    </div>
+
+    <div id="fosterBridgeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+            <h3 class="text-2xl font-bold mb-4">About FosterBridge</h3>
+            <p class="mb-4">FosterBridge is a global networking program designed to connect and support innovative startups across Asia. This program offers the following key features:</p>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Connects startup ecosystems across Asia</li>
+                <li>Provides investment opportunities and business partnerships</li>
+                <li>Offers mentoring and educational programs</li>
+                <li>Supports global market expansion</li>
+            </ul>
+            <p class="mb-4">FosterBridge aims to create a vibrant ecosystem where startups can thrive, innovate, and expand their reach across international markets.</p>
+        <p class="mb-4">For more detailed information, please visit the <a href="https://fosterbridge.asia" target="_blank" class="text-blue-600 hover:underline">official FosterBridge website</a>.</p>
+        <button id="closeFosterBridgeModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Close</button>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -475,6 +510,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+        
+    document.getElementById('openFosterBridgeModal').addEventListener('click', function() {
+        document.getElementById('fosterBridgeModal').classList.remove('hidden');
+    });
+
+    document.getElementById('closeFosterBridgeModal').addEventListener('click', function() {
+        document.getElementById('fosterBridgeModal').classList.add('hidden');
+    });
+
     </script>
 </body>
 </html>
