@@ -448,27 +448,62 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
-        <div id="stats" class="section bg-gray-100">
-            <div class="container mx-auto px-4 h-full flex items-center">
-                <div class="w-full">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our performance</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div data-aos="fade-up" data-aos-delay="200">
-                            <p class="text-4xl font-bold text-blue-600">100%</p>
-                            <p>Driving Client Success</p>
+       <section id="stats" class="section bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Performance</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                <div class="text-gray-600">Driving Client Success</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl font-bold text-blue-600 mb-2">500%</div>
+                <div class="text-gray-600">Maximum Annual Growth Rate</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl font-bold text-blue-600 mb-2">$1M+</div>
+                <div class="text-gray-600">Client Revenue Achievement in 2022</div>
+            </div>
+        </div>
+
+        <div class="swiper-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-center max-w-md mx-auto">
+                        <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-16 h-16 object-contain mr-4">
+                        <div>
+                            <p class="text-gray-600 italic">"BOWL International is the most reliable partner."</p>
+                            <p class="text-gray-800 font-semibold mt-2">- KOTRA</p>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="400">
-                            <p class="text-4xl font-bold text-blue-600">500%</p>
-                            <p>Maximum Annual Growth Rate</p>
+                    </div>
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-center max-w-md mx-auto">
+                        <img src="./img/KU_logo.png" alt="Korea University Logo" class="w-16 h-16 object-contain mr-4">
+                        <div>
+                            <p class="text-gray-600 italic">"Their expertise in e-commerce is unparalleled."</p>
+                            <p class="text-gray-800 font-semibold mt-2">- Korea University</p>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="600">
-                            <p class="text-4xl font-bold text-blue-600">$1M+</p>
-                            <p>Client Revenue Achievement in 2022</p>
+                    </div>
+                </div>
+                <div class="swiper-slide flex items-center justify-center">
+                    <div class="bg-white rounded-lg shadow-md p-6 flex items-center max-w-md mx-auto">
+                        <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="w-16 h-16 object-contain mr-4">
+                        <div>
+                            <p class="text-gray-600 italic">"BOWL International's strategies drove our global success."</p>
+                            <p class="text-gray-800 font-semibold mt-2">- IGNITABULL</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+
+
 
         
         <div id="contact" class="section bg-blue-600">
@@ -591,7 +626,28 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('closeFosterBridgeModal').addEventListener('click', function() {
         document.getElementById('fosterBridgeModal').classList.add('hidden');
     });
-
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+});
     </script>
 </body>
 </html>
