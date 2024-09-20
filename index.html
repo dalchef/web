@@ -70,6 +70,9 @@
                 height: 100%;
             }
         }
+         .swiper-slide {
+        width: 300px !important;
+        }
         .footer-hidden {
             transform: translateY(100%);
             transition: transform 0.5s ease-out;
@@ -470,6 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+              
                     <div class="swiper-slide">
                         <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
                             <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-16 h-16 object-contain mr-4">
@@ -565,20 +569,37 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        speed: 5000,
+        grabCursor: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+    });
+});
+</script>
 
 <style>
 .swiper-container {
     overflow: hidden;
 }
 .swiper-wrapper {
+    display: flex;
     transition-timing-function: linear !important;
 }
 .swiper-slide {
     width: auto;
-    max-width: 500px;
+    flex-shrink: 0;
 }
 </style>
-
 
         
         <div id="contact" class="section bg-blue-600">
@@ -701,11 +722,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('closeFosterBridgeModal').addEventListener('click', function() {
         document.getElementById('fosterBridgeModal').classList.add('hidden');
     });
-document.addEventListener('DOMContentLoaded', function() {
+    
+    document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 30,
-        centeredSlides: true,
         loop: true,
         autoplay: {
             delay: 0,
@@ -715,8 +736,9 @@ document.addEventListener('DOMContentLoaded', function() {
         grabCursor: true,
         mousewheelControl: true,
         keyboardControl: true,
+        });
     });
-});
+        
     </script>
 </body>
 </html>
