@@ -15,6 +15,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         html, body {
             margin: 0;
@@ -90,12 +95,11 @@
         </div>
         <nav class="hidden md:block">
             <ul class="flex space-x-2 sm:space-x-4">
+                <li><a href="#solution" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Solution</a></li>
                 <li><a href="#services" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Service</a></li>
-                <li><a href="#about" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Vision</a></li>
-                <li><a href="#team" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Team</a></li>
-                <li><a href="#history-1" class="text-xs sm:text-sm md:text-base hover:text-blue-200">History</a></li>
-                <li><a href="#partners" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Partners</a></li>
-                <li><a href="#contact" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Contact</a></li>
+                <li><a href="#fosterbridge" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Ecosystem</a></li>
+                <li><a href="#about" class="text-xs sm:text-sm md:text-base hover:text-blue-200">About us</a></li>
+                <li><a href="#contact" class="text-xs sm:text-sm md:text-base hover:text-blue-200">Contact us</a></li>
             </ul>
         </nav>
         <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
@@ -117,7 +121,7 @@
 </header>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -132,6 +136,29 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.add('hidden');
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        }
+    });
+});
 });
 </script>
     <div id="fullpage">
@@ -149,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
 
-       <div id="services" class="section relative overflow-hidden flex items-center justify-center min-h-screen">
+       <div id="solution" class="section relative overflow-hidden flex items-center justify-center min-h-screen">
         <div class="absolute inset-0 z-0">
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
                 <source src="bg_video2.mp4" type="video/mp4">
@@ -158,8 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div class="container mx-auto px-4 py-16 relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white shadow-text" data-aos="fade-up">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white shadow-text" data-aos="fade-up">Solution</h2>
+            
                 <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-right">
                     <div class="flex flex-col items-center mb-4">
                         <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -169,16 +196,107 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <p class="text-gray-100 shadow-text">We offer optimized strategies based on AI/ML-driven marketing technology stack. We find the best combination for your company from over 10,000 marketing tools.</p>
                 </div>
-                <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-left">
-                    <div class="flex flex-col items-center mb-4">
-                        <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                        </svg>
-                        <h3 class="text-2xl font-bold text-white shadow-text">eCommerce Venture Studio</h3>
-                    </div>
-                    <p class="text-gray-100 shadow-text">A comprehensive solution for entering global e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
-                </div>
-            </div>
+                <br>
+                
+                        <div class="relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"BOWL International has proven to be the most reliable partner in our global expansion efforts."</p>
+                                                <p class="font-bold mt-2">- KOTRA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/KU_logo.png" alt="Korea University Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"The expertise BOWL International brings to e-commerce is truly unparalleled."</p>
+                                                <p class="font-bold mt-2">- Korea University</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"BOWL International's strategies drove our global success."</p>
+                                                <p class="font-bold mt-2">- IGNITABULL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"They provided invaluable insights for our startup."</p>
+                                                <p class="font-bold mt-2">- Seoul Startup Hub</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"BOWL International's approach to e-commerce is innovative and effective."</p>
+                                                <p class="font-bold mt-2">- Sungkyunkwan University</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/fosterBridge.png" alt="Foster Bridge Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"Their global networking program opened new doors for us."</p>
+                                                <p class="font-bold mt-2">- Foster Bridge</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/kibo_logo.png" alt="KIBO Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"BOWL International's venture business certification process was professional."</p>
+                                                <p class="font-bold mt-2">- KIBO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"Their support in the Value Chain Convergence program was crucial for our success."</p>
+                                                <p class="font-bold mt-2">- Innovation Business Association</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/client_logo_9.png" alt="Tech Innovators Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"BOWL International's data-driven approach significantly improved our e-commerce performance."</p>
+                                                <p class="font-bold mt-2">- Tech Innovators</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                                            <img src="./img/client_logo_10.png" alt="Global Trade Partners Logo" class="w-16 h-16 object-contain mr-4">
+                                            <div>
+                                                <p>"Their insights into international markets were game-changing for our business."</p>
+                                                <p class="font-bold mt-2">- Global Trade Partners</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+               
+            
         </div>
     </div>
 
@@ -188,42 +306,221 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     </style>
 
-       <div id="about" class="section relative overflow-hidden flex items-center justify-center min-h-screen">
-        <div class="absolute inset-0 z-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-                <source src="bg_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-        <div class="container mx-auto px-4 py-16 relative z-10">
-            <div class="max-w-3xl mx-auto text-center">
-                <div class="flex items-center justify-center mb-6" data-aos="fade-up">
-                    <svg class="w-12 h-12 text-blue-300 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+<div id="services" class="section relative overflow-hidden flex items-center justify-center min-h-screen">
+    <div class="absolute inset-0 z-0">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+            <source src="bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    <div class="container mx-auto px-4 py-16 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white shadow-text" data-aos="fade-up">Our Services(eCommerce Venture Studio)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col items-center mb-4">
+                    <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     </svg>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white shadow-text">Vision</h2>
+                    <h3 class="text-2xl font-bold text-white shadow-text">PoC Analysis Report</h3>
                 </div>
-                <p class="text-xl text-gray-100 mb-6 shadow-text" data-aos="fade-up" data-aos-delay="200">
-                    BOWL International leverages data-driven decision-making and sustainable growth strategies to foster success in the global e-commerce market. 
-                </p>
-                <p class="text-xl text-gray-100 shadow-text" data-aos="fade-up" data-aos-delay="400">
-                    Our team of experts and innovative technology work together to enhance your brand value and boost your revenue.
-                </p>
+                <p class="text-gray-100 shadow-text">Launching Korean SMEs into North American E-commerce: Your Market Entry Validation Partner</p>
+            </div>
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col items-center mb-4">
+                    <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white shadow-text">Flywheel Partnership</h3>
+                </div>
+                <p class="text-gray-100 shadow-text">A comprehensive solution for entering global e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
+            </div>
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col items-center mb-4">
+                    <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white shadow-text">Direct Purchase</h3>
+                </div>
+                <p class="text-gray-100 shadow-text">Data-Driven Korean Products, Direct to Amazon US Leverage export insights to create winning products for North American e-commerce. We'll build your Amazon US channel for direct sales and maximum profit</p>
             </div>
         </div>
     </div>
+</div>
 
     <style>
         .shadow-text {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
         }
     </style>
 
-<div id="fosterbridge" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16">
+<div id="service_1" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16 relative" style="background-image: url('./img/service_1_bg.jpg'); background-size: cover; background-position: center;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    
+    <div class="container mx-auto px-4 py-16 relative z-10">
+        <div class="max-w-3xl mx-auto text-center text-white">
+            <div class="flex flex-col items-center justify-center mb-6" data-aos="fade-up" >
+           
+            <div class="flex items-center justify-center mb-6" data-aos="fade-up">
+                <svg class="w-12 h-12 mb-3 text-blue-300 " data-aos="fade-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                </svg> 
+                <h2 class="text-3xl md:text-4xl font-bold text-white shadow-text"> PoC Analysis Report</h2>
+            </div>
+            
+            <p class="text-lg md:text-xl mb-4 shadow-text" data-aos="fade-up" data-aos-delay="200">
+                2024 Regional SME Value Chain Convergence Support Project <br> by Innovation Business Association
+            </p>
+            <p class="text-md md:text-lg shadow-text" data-aos="fade-up" data-aos-delay="400">
+                Operating Agency for Data Analysis Consulting Support <br> for North American E-commerce Market Entry
+            </p>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<div id="service_2" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16 relative" style="background-image: url('./img/service_2_bg.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+    <!-- Dark overlay with increased opacity -->
+    <div class="absolute inset-0 bg-black opacity-75"></div>
+    
+    <div class="container mx-auto px-4 py-20 relative z-10">
+        
+        <div class="max-w-3xl mx-auto text-center text-white">
+
+            <div class="bg-white bg-opacity-20 p-6 rounded-lg backdrop-blur-sm flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex flex-col items-center mb-4">
+                <svg class="w-12 h-12 mb-3 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-white shadow-text">Flywheel Partnership</h3>
+            </div>
+            <p class="text-gray-100 shadow-text">A comprehensive solution for entering global e-commerce markets. We support the entire process from product validation to launch, growth, and expansion.</p>
+        </div>
+    <br>
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up" data-aos-delay="500">Our Performance</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                <div class="text-4xl font-bold text-red-600 mb-2">100%</div>
+                <div class="text-white-600">Driving Client Success</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                <div class="text-4xl font-bold text-red-600 mb-2">500%</div>
+                <div class="text-white-600">Maximum Annual Growth Rate</div>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+                <div class="text-4xl font-bold text-red-600 mb-2">$1M+</div>
+                <div class="text-white-600">Client Revenue Achievement in 2022</div>
+            </div>
+        </div>
+
+    </div>
+
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="1000">
+                <div class="bg-blue-600 text-white p-2 sm:p-3" data-aos="fade-left" data-aos-delay="400">
+                    <h3 class="text-base sm:text-lg font-semibold">Our Amazon Services</h3>
+                </div>
+                
+                <div class="p-3 sm:p-4">
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-4 text-black">
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                            <span class="text-xs">Market analysis</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                            <span class="text-xs">Listing optimization</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <span class="text-xs">Pricing strategy</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                            <span class="text-xs">Inventory management</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                            <span class="text-xs">Performance optimization</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
+                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                            <span class="text-xs">A/B testing</span>
+                        </div>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="800">
+                        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                            Get Started
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+
+
+<div id="service_3" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16 relative" style="background-image: url('./img/service_3_bg.jpg'); background-size: cover; background-position: center;">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    
+    <div class="container mx-auto px-4 py-16 relative z-10">
+        <div class="max-w-3xl mx-auto text-center text-white">
+            <div class="flex flex-col items-center justify-center mb-6" data-aos="fade-up" >
+                
+            <div class="flex items-center justify-center mb-6" data-aos="fade-up">
+                <svg class="w-12 h-12 mr-4 text-blue-300" data-aos="fade-up" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                <h2 class="text-3xl md:text-4xl font-bold text-white shadow-text">Direct Purchase</h2>
+            </div>
+            
+            <p class="text-lg md:text-xl mb-4 shadow-text" data-aos="fade-up" data-aos-delay="200">
+                Data-Driven Korean Products, Direct to Amazon US Leverage export insights to create winning products for North American e-commerce. We'll build your Amazon US channel for direct sales and maximum profit.
+            </p>
+
+            
+            <button id="viewMoreBtn" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                View More
+            </button>
+        </div>
+        </div>
+    </div> 
+</div>
+
+
+<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4">
+        <h3 class="text-2xl font-bold mb-4">Product Details</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-4">
+                <img src="./img/service_3_product1.jpg" alt="Cosmetic 1" class="w-full h-48 object-cover rounded">
+                <img src="./img/service_3_product2.jpg" alt="Cosmetic 2" class="w-full h-48 object-cover rounded">
+            </div>
+            <div class="space-y-4">
+                <img src="./img/service_3_product3.jpg" alt="Cosmetic 3" class="w-full h-48 object-cover rounded">
+                <img src="./img/service_3_product4.jpg" alt="Cosmetic 4" class="w-full h-48 object-cover rounded">
+            </div>
+        </div>
+        <p class="mt-4">
+            Our cosmetic products are carefully formulated with premium Korean ingredients, designed to nourish and rejuvenate your skin. From hydrating serums to gentle cleansers, our range caters to all skin types and concerns. Experience the beauty of Korean skincare with our curated selection, now available for direct purchase on Amazon US.
+        </p>
+        <button id="closeModal" class="mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Close
+        </button>
+    </div>
+</div>
+
+<div id="fosterbridge" class="section bg-blue-50 min-h-screen flex items-center justify-center py-16 relative" style="background-image: url('./img/fosterbridge_bg.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="container mx-auto px-4 py-16">
     
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-4xl mx-auto text-center text-white" data-aos="fade-up" data-aos-delay="200">
             <img src="./img/fosterBridge.png" alt="FosterBridge Logo" class="mx-auto mb-6 w-48"><p>
             <p class="mb-6 text-lg">FosterBridge is a global startup networking program organized by BOWL International. It connects and supports innovative startups across Asia, fostering growth and collaboration.</p>
             <button id="openFosterBridgeModal" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition duration-300">Learn more </button>
@@ -231,56 +528,57 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 
+<div id="fosterBridgeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+        <h3 class="text-2xl font-bold mb-4">About FosterBridge</h3>
+        <p class="mb-4">FosterBridge is a global networking program designed to connect and support innovative startups across Asia. This program offers the following key features:</p>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Connects startup ecosystems across Asia</li>
+                <li>Provides investment opportunities and business partnerships</li>
+                <li>Offers mentoring and educational programs</li>
+                <li>Supports global market expansion</li>
+            </ul>
+        <p class="mb-4">FosterBridge aims to create a vibrant ecosystem where startups can thrive, innovate, and expand their reach across international markets.</p>
+        <p class="mb-4">For more detailed information, please visit the <a href="https://fosterbridge.asia" target="_blank" class="text-blue-600 hover:underline">official FosterBridge website</a>.</p>
+            <button id="closeFosterBridgeModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Close</button>
+    </div>
+</div>
 
+<div id="about" class="section relative overflow-hidden flex items-center justify-center pt-16 pb-8  min-h-screen">
+    <div class="absolute inset-0 z-0">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+            <source src="bg_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+    </div>
+    <div class="container mx-auto px-4 py-16 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="flex items-center justify-center mb-6" data-aos="fade-up">
+                <svg class="w-12 h-12 text-blue-300 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <h2 class="text-3xl md:text-4xl font-bold text-white shadow-text">Vision</h2>
+            </div>
+            <p class="text-xl text-gray-100 mb-6 shadow-text" data-aos="fade-up" data-aos-delay="200">
+                BOWL International leverages data-driven decision-making and sustainable growth strategies to foster success in the global e-commerce market. 
+            </p>
+            <p class="text-xl text-gray-100 shadow-text" data-aos="fade-up" data-aos-delay="400">
+                Our team of experts and innovative technology work together to enhance your brand value and boost your revenue.
+            </p>
 
-<div id="team" class="section bg-gray-100 min-h-screen flex items-center">
-    <div class="container mx-auto px-4 py-16">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16" data-aos="fade-up">Team</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12 max-w-4xl mx-auto">
-            <div class="text-center" data-aos="fade-up">
-                <img src="./img/kh.jpg" alt="KH Kim" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">KH Kim</h3>
-                <p class="text-sm">Founding Partner</p>
-                <p class="text-xs text-gray-600">Program Partner at Techstars</p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                <img src="./img/suk.jpg" alt="Euisuk Rho" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">Euisuk Rho</h3>
-                <p class="text-sm">Founding Partner</p>
-                <p class="text-xs text-gray-600">CEO at Food and The City</p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="./img/ho.jpg" alt="Jinho Bae" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">Jinho Bae</h3>
-                <p class="text-sm">Founding Partner</p>
-                <p class="text-xs text-gray-600">CEO at Nextstage</p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <img src="./img/jh.jpg" alt="Jihoon Song" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">Jihoon Song</h3>
-                <p class="text-sm">Founding Partner</p>
-                <p class="text-xs text-gray-600">CEO at NOMADEA</p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <img src="./img/sg.jpg" alt="Segyo Oh" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">Segyo Oh</h3>
-                <p class="text-sm">Program Manager</p>
-                <p class="text-xs text-gray-600">Prev. Techstars</p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-                <img src="./img/yh.jpg" alt="Yoonhee Bae" class="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full mx-auto mb-3">
-                <h3 class="text-base sm:text-lg font-bold">Yoonhee Bae</h3>
-                <p class="text-sm">Program Manager</p>
-                <p class="text-xs text-gray-600">Prev. K-Brain Co.</p>
-            </div>
+            
+
         </div>
     </div>
 </div>
 
-<div id="history" class="section bg-white min-h-screen flex items-center justify-center pt-16 pb-8">
-    <div class="container mx-auto px-2 sm:px-4">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12" data-aos="fade-up">Our History</h2>
-        <div class="space-y-4 sm:space-y-6 max-w-3xl mx-auto">
+<div id="history" class="section bg-collage min-h-screen flex items-center justify-center pt-16 pb-8 relative">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+    <div class="container mx-auto px-4 relative z-10 sm:px-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-12" data-aos="fade-up">Our History</h2>
+        <div class="space-y-4 sm:space-y-6 max-w-3xl text-white mx-auto">
             <div class="flex flex-row items-center" data-aos="fade-right">
                 <div class="w-20 sm:w-24 font-bold text-right pr-4 text-xs sm:text-sm">2024.09</div>
                 <div>
@@ -340,231 +638,129 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
-<div id="amazon" class="section bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen flex items-center justify-center py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6" data-aos="fade-down" data-aos-duration="1000">Amazon Channel Expertise</h2>
+
+<div id="team" class="section py-20 bg-minimal">
+    <div class="content-wrapper">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-16 mt-8" data-aos="fade-up">Our Team</h2>
         
-        <div class="max-w-5xl mx-auto">
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden mb-4 sm:mb-6" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="bg-blue-600 text-white p-2 sm:p-3" data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="text-base sm:text-lg font-semibold">Amazon US Market Insights</h3>
-                </div>
-                <div class="p-3 sm:p-4">
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-sm">
-                        <div class="bg-blue-50 p-2 rounded-lg" data-aos="flip-left" data-aos-delay="300" data-aos-duration="800">
-                            <div class="font-bold">$61.3M</div>
-                            <div class="text-xs">Avg. monthly revenue</div>
-                        </div>
-                        <div class="bg-blue-50 p-2 rounded-lg" data-aos="flip-left" data-aos-delay="400" data-aos-duration="800">
-                            <div class="font-bold">1,743</div>
-                            <div class="text-xs">Companies with revenue</div>
-                        </div>
-                        <div class="bg-blue-50 p-2 rounded-lg" data-aos="flip-left" data-aos-delay="500" data-aos-duration="800">
-                            <div class="font-bold">$8.7M</div>
-                            <div class="text-xs">Highest revenue</div>
-                        </div>
-                        <div class="bg-blue-50 p-2 rounded-lg" data-aos="flip-left" data-aos-delay="600" data-aos-duration="800">
-                            <div class="font-bold">31%</div>
-                            <div class="text-xs">Top 5 market share</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6 mt-8">
+            <!-- Team member 1 -->
+            <div class="team-member" data-aos="fade-up">
+                <img src="./img/kh.jpg" alt="KH Kim" class="w-32 h-32 rounded-full mx-auto mb-2 object-cover">
+                <h3 class="text-xl font-semibold">KH Kim</h3>
+                <p class="text-gray-600">CEO</p>
+                <p class="text-sm">Program Partner at Techstars</p>
             </div>
             
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-                <div class="bg-blue-600 text-white p-2 sm:p-3" data-aos="fade-left" data-aos-delay="400">
-                    <h3 class="text-base sm:text-lg font-semibold">Our Amazon Services</h3>
-                </div>
-                <div class="p-3 sm:p-4">
-                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-3 mb-4">
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                            <span class="text-xs">Market analysis</span>
-                        </div>
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
-                            <span class="text-xs">Listing optimization</span>
-                        </div>
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            <span class="text-xs">Pricing strategy</span>
-                        </div>
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                            <span class="text-xs">Inventory management</span>
-                        </div>
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="900" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                            <span class="text-xs">Performance optimization</span>
-                        </div>
-                        <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">
-                            <svg class="w-6 h-6 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
-                            <span class="text-xs">A/B testing</span>
-                        </div>
-                    </div>
-                    <div class="text-center" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="800">
-                        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition duration-300 inline-flex items-center">
-                            Get Started
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
+            <!-- Team member 2 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                <img src="./img/suk.jpg" alt="Euisuk Rho" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Euisuk Rho</h3>
+                <p class="text-gray-600">Partner</p>
+                <p class="text-sm">CEO at Food and The City</p>
+            </div>
+            
+            <!-- Team member 3 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                <img src="./img/ho.jpg" alt="Jinho Bae" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Jinho Bae</h3>
+                <p class="text-gray-600">Partner</p>
+                <p class="text-sm">Prev. Techstars. KOTRA Stockholm</p>
+            </div>
+            
+            <!-- Team member 4 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                <img src="./img/danKim.jpg" alt="Dan Kim" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Dan Kim</h3>
+                <p class="text-gray-600">Partner</p>
+                <p class="text-sm">Prev. Techstars; Linkedin</p>
+            </div>
+            
+            <!-- Team member 5 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                <img src="./img/sg.jpg" alt="Segyo Oh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Segyo Oh</h3>
+                <p class="text-gray-600">Manager</p>
+                <p class="text-sm">Prev. Techstars</p>
+            </div>
+            
+            <!-- Team member 6 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="500">
+                <img src="./img/yh.jpg" alt="Yoonhee Bae" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Yoonhee Bae</h3>
+                <p class="text-gray-600">Manager</p>
+                <p class="text-sm">Prev. K-Brain Co.</p>
+            </div>
+            
+            <!-- Team members 7-12 (placeholder data, replace with actual info) -->
+            <!-- Team member 7 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="600">
+                <img src="./img/DJ_Bae.jpg" alt="DJ Bae" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">DJ Bae</h3>
+                <p class="text-gray-600">Manager</p>
+                <p class="text-sm">Prev. Director at GM Korea</p>
+            </div>
+            
+            <!-- Team member 8 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="700">
+                <img src="./img/stepahne.jpg" alt="" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Stephane Koenig</h3>
+                <p class="text-gray-600">Advisor(Strategy)</p>
+                <p class="text-sm">Special Advisor at Yahoo</p>
+            </div>
+            
+            <!-- Team member 9 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="800">
+                <img src="./img/Alision.png" alt="allision" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Allision Nam</h3>
+                <p class="text-gray-600">Advisor(IR)</p>
+                <p class="text-sm">Prev. Techstars; J.P.Morgan</p>
+            </div>
+            
+            <!-- Team member 10 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="900">
+                <img src="./img/rosa.png" alt="Rosa Cheng" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Rosa Cheng</h3>
+                <p class="text-gray-600">Advisor(Growth)</p>
+                <p class="text-sm">Prev. Techstars; Bain&Company</p>
+            </div>
+            
+            <!-- Team member 11 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="1000">
+                <img src="./img/james.jpg" alt="James Park" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">James Park</h3>
+                <p class="text-gray-600">Advisor(Strategy)</p>
+                <p class="text-sm">Prev.DIFC; AWS; Techstars</p>
+            </div>
+            
+            <!-- Team member 12 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="1100">
+                <img src="./img/Jeremy.jpg" alt="jeremy hamilton" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold">Jeremy Hamilton</h3>
+                <p class="text-gray-600">Partner</p>
+                <p class="text-sm">Digital brand and Agency Expert</p>
             </div>
         </div>
     </div>
 </div>
 
-        <div id="partners" class="section bg-gray-100 min-h-screen flex items-center justify-center py-24 sm:py-32">
-    <div class="container mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16" data-aos="fade-up">Our Partners & Clients</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up">
-                <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
-                <img src="./img/KU_logo.png" alt="Korea University Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="300">
-                <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
-                <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="500">
-                <img src="./img/fosterBridge.png" alt="Foster Bridge Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
-                <img src="./img/kibo_logo.png" alt="KIBO Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="700">
-                <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center" data-aos="fade-up" data-aos-delay="800">
-                <img src="./img/INNO_logo.png" alt="Ninth Partner Logo" class="max-w-full max-h-full object-contain">
+
+<div id="contact" class="section bg-blue-600">
+    <div class="container mx-auto px-4 h-full flex items-center">
+        <div class="w-full text-white">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Start Now</h2>
+            <p class="text-center mb-8" data-aos="fade-up" data-aos-delay="200">Together, we'll create success in the global e-commerce market.</p>
+            <div class="text-center">
+                <a href="mailto:kkh908@naver.com" class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-100 inline-block" data-aos="fade-up" data-aos-delay="400">contact</a>
             </div>
         </div>
     </div>
+    
 </div>
-      <section id="stats" class="section bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Performance</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
-                <div class="text-gray-600">Driving Client Success</div>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-4xl font-bold text-blue-600 mb-2">500%</div>
-                <div class="text-gray-600">Maximum Annual Growth Rate</div>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-4xl font-bold text-blue-600 mb-2">$1M+</div>
-                <div class="text-gray-600">Client Revenue Achievement in 2022</div>
-            </div>
-        </div>
 
-        <div class="relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/KOTRA_Logo.png" alt="KOTRA Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"BOWL International is the most reliable partner."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- KOTRA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/KU_logo.png" alt="Korea University Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"Their expertise in e-commerce is unparalleled."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Korea University</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/bull_logo.png" alt="IGNITABULL Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"BOWL International's strategies drove our global success."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- IGNITABULL</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/hug_logo.png" alt="Seoul Startup Hub Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"They provided invaluable insights for our startup."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Seoul Startup Hub</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/SKK_Logo.png" alt="Sungkyunkwan University Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"BOWL International's approach to e-commerce is innovative and effective."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Sungkyunkwan University</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/fosterBridge.png" alt="Foster Bridge Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"Their global networking program opened new doors for us."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Foster Bridge</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/kibo_logo.png" alt="KIBO Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"BOWL International's venture business certification process was smooth and professional."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- KIBO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/INNO_logo.png" alt="Innovation Business Association Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"Their support in the Value Chain Convergence program was crucial for our success."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Innovation Business Association</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/client_logo_9.png" alt="Tech Innovators Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"BOWL International's data-driven approach significantly improved our e-commerce performance."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Tech Innovators</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
-                            <img src="./img/client_logo_10.png" alt="Global Trade Partners Logo" class="w-16 h-16 object-contain mr-4">
-                            <div>
-                                <p class="text-gray-600 italic">"Their insights into international markets were game-changing for our business."</p>
-                                <p class="text-gray-800 font-semibold mt-2">- Global Trade Partners</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 
 <style>
 .swiper-container {
@@ -577,42 +773,95 @@ document.addEventListener('DOMContentLoaded', function() {
     width: auto;
     max-width: 500px;
 }
+.bg-collage {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('./img/col/그림1.jpg'),
+        url('./img/col/그림2.jpg'),
+        url('./img/col/그림3.jpg'),
+        url('./img/col/그림4.jpg'),
+        url('./img/col/그림5.jpg'),
+        url('./img/col/그림6.jpg'),
+        url('./img/col/그림7.png'),
+        url('./img/col/그림8.png'),
+        url('./img/col/그림9.png');
+        background-position: 
+        center,
+        top left, top center, top right,
+        center left, center center, center right,
+        bottom left, bottom center, bottom right;
+    background-size: 
+        cover,
+        33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%,
+        33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%,
+        33.33% 33.33%, 33.33% 33.33%, 33.33% 33.33%;
+        
+    background-repeat: no-repeat;
+}
+.bg-minimal {
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-minimal::before,
+.bg-minimal::after {
+    content: '';
+    position: absolute;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.bg-minimal::before {
+    width: 600px;
+    height: 600px;
+    top: -300px;
+    left: -300px;
+}
+
+.bg-minimal::after {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -200px;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.team-member {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+    .team-member {
+        padding: 1rem;
+    }
+    .content-wrapper{
+        padding: 2rem 1rem;
+    }
+}
 </style>
 
 
         
-        <div id="contact" class="section bg-blue-600">
-            <div class="container mx-auto px-4 h-full flex items-center">
-                <div class="w-full text-white">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" data-aos="fade-up">Start Now</h2>
-                    <p class="text-center mb-8" data-aos="fade-up" data-aos-delay="200">Together, we'll create success in the global e-commerce market.</p>
-                    <div class="text-center">
-                        <a href="mailto:kkh908@naver.com" class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-100 inline-block" data-aos="fade-up" data-aos-delay="400">contact</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
 
-        
-        
-    </div>
-
-    <div id="fosterBridgeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
-            <h3 class="text-2xl font-bold mb-4">About FosterBridge</h3>
-            <p class="mb-4">FosterBridge is a global networking program designed to connect and support innovative startups across Asia. This program offers the following key features:</p>
-            <ul class="list-disc pl-6 mb-4">
-                <li>Connects startup ecosystems across Asia</li>
-                <li>Provides investment opportunities and business partnerships</li>
-                <li>Offers mentoring and educational programs</li>
-                <li>Supports global market expansion</li>
-            </ul>
-            <p class="mb-4">FosterBridge aims to create a vibrant ecosystem where startups can thrive, innovate, and expand their reach across international markets.</p>
-        <p class="mb-4">For more detailed information, please visit the <a href="https://fosterbridge.asia" target="_blank" class="text-blue-600 hover:underline">official FosterBridge website</a>.</p>
-        <button id="closeFosterBridgeModal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Close</button>
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -717,6 +966,30 @@ document.addEventListener('DOMContentLoaded', function() {
         keyboardControl: true,
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const productModal = document.getElementById('productModal');
+        const closeModal = document.getElementById('closeModal');
+
+        viewMoreBtn.addEventListener('click', function() {
+            productModal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', function() {
+            productModal.classList.add('hidden');
+        });
+
+        productModal.addEventListener('click', function(e) {
+            if (e.target === productModal) {
+                productModal.classList.add('hidden');
+            }
+        });
+    });
     </script>
+
+
+
 </body>
 </html>
